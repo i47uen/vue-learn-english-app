@@ -1,8 +1,9 @@
 <template>
     <div class="page-word_generator">
-        <h1 class="word">{{ arr[1].word }}</h1>
-        <h5 class="word-translate">{{showTranslate ? arr[1].word_tr : "..."}}</h5>
+        <h1 class="word">{{ arr[currentWord].word }}</h1>
+        <h5 class="word-translate">{{showTranslate ? arr[currentWord].word_tr : "..."}}</h5>
         <button @click="toggleShowTranslate">{{showTranslate ? "Скрыть перевод" : "Показать перевод"}}</button>
+        <button @click="getNewWord">new</button>
     </div>
 </template>
 
@@ -16,12 +17,21 @@
         },
         data: function() {
             return {
-                showTranslate: true
+                showTranslate: true,
+                currentWord: this.getRandomElArr()
             }
         },
         methods: {
             toggleShowTranslate: function () {
                 this.showTranslate = !this.showTranslate
+            },
+            getRandomElArr(){
+                let el = Math.floor(Math.random() * this.arr.length)
+                // return {word, word_tr}
+                return el
+            },
+            getNewWord(){
+                this.currentWord = this.getRandomElArr()
             }
         }
     }

@@ -10,9 +10,6 @@
 <script>
     export default {
         name: "WordGenerator",
-        props: {
-          btnClickHandler: Function
-        }
     }
 </script>
 

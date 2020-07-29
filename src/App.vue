@@ -2,7 +2,7 @@
   <div id="app">
       <Header @header-btn-click="toggleShowStudiedWords" />
       <main>
-          <WordGenerator v-if="!showStudiedWords" arr="words" />
+          <WordGenerator v-if="!showStudiedWords" :arr="words" ref="wordGen" />
           <StudiedWords v-else />
       </main>
       <Footer />
@@ -23,6 +23,10 @@ export default {
             showStudiedWords: false,
             words: [
                 {word:"Car", word_tr:"Машина"},
+                {word:"Banana", word_tr:"Банан"},
+                {word:"Door", word_tr:"Дверь"},
+                {word:"Home", word_tr:"Дом"},
+                {word:"Ice", word_tr:"Лёд"},
                 {word:"Apple", word_tr:"Яблоко"},
                 {word:"Hi", word_tr:"Привет"},
             ]
@@ -31,7 +35,7 @@ export default {
     methods: {
         toggleShowStudiedWords: function () {
             this.showStudiedWords = !this.showStudiedWords
-        }
+        },
     },
     components: {
         Header,
