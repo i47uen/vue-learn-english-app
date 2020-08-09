@@ -45,7 +45,7 @@ export default {
             {id: 4, word:"Ice", word_tr:"Лёд", studied: false},
             {id: 5, word:"Cat", word_tr:"Кот", studied: false},
             {id: 6, word:"Apple", word_tr:"Яблоко", studied: false},
-            {id: 7, word:"Mouse", word_tr:"Мышь", studied: true},
+            {id: 7, word:"Mouse", word_tr:"Мышь", studied: false},
         ]
       }
     },
