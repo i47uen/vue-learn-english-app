@@ -1,7 +1,7 @@
 <template>
     <footer class="page-footer">
-        <button class="footer-btn footer-btn__iknow">Я знаю это слово</button>
-        <button class="footer-btn footer-btn__next">Показать другое слово</button>
+        <button class="footer-btn footer-btn__iknow" @click="$emit('leftBtnClicked')">Я знаю это слово</button>
+        <button class="footer-btn footer-btn__next" @click="$emit('rightBtnClicked')">Показать другое слово</button>
     </footer>
 </template>
 
