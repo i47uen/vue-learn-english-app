@@ -1,4 +1,4 @@
-c# vue-learn-english-app
+# vue-learn-english-app
 
 ## Project setup
 ```

@@ -1,8 +1,6 @@
 <template>
 
-    <header class="page-header">
-        <button @click="$emit('header-btn-click')" class="header-btn">|||</button>
-    </header>
+    <header class="page-header"></header>
 
 </template>
 
